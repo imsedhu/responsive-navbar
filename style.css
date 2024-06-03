@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Reddit Mono", monospace;
+}
+
+.container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  color: white;
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-inline: 20px;
+  padding-top: 10px;
+  height: 50px;
+}
+.nav-name{
+  font-size: 20px;
+}
+.close-button,
+.toggle-button{
+  display: flex;
+  cursor: pointer;
+}
+.toggle-button i{
+  font-size: 20px;
+}
+ul{
+  list-style: none;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+
+
+/* mobile devices */
+@media screen and (max-width: 660px) {
+  .nav-menu{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    transition: top .4s;
+  }
+  ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    text-align: center;
+  }
+  a{
+    font-size: 20px;
+  }
+  a:hover{
+    color: chartreuse;
+  }
+  .close-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+
+  .close-button i{
+    font-size: 30px;
+    padding: 10px;
+  }
+}
+/* show menu */
+.show-menu{
+  top: 0;
+}
+
+/* large devices */
+@media screen and (min-width: 660px) {
+  ul{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .toggle-button,
+  .close-button{
+    display: none;
+  }
+  a:hover{
+    color: chartreuse;
+  }
+}
